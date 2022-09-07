@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {"start": "npm run lint && node ."},
+  "scripts": {"deploy": "npm run lint && node deploy-commands.js",
+  "start": "npm run lint && node .",
+  "lint": "eslint *.js **/*.js",
+  "lint:fix": "eslint *.js **/*.js --fix"},
   "engines": {
     "node": "16.x"
   },
