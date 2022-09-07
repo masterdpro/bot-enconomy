@@ -9,7 +9,7 @@
     "lint": "eslint *.js **/*.js",
     "lint:fix": "eslint *.js **/*.js --fix"
   },
-  "engine": {
+  "engines": {
     "node": "16.x"
   },
   "keywords": [],
