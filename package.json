@@ -9,6 +9,9 @@
     "lint": "eslint *.js **/*.js",
     "lint:fix": "eslint *.js **/*.js --fix"
   },
+  "engine": {
+    "node": "16.x"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
