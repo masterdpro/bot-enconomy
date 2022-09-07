@@ -1,0 +1,7 @@
+{
+    "printWidth": 120,
+    "tableWidth": 2,
+    "useTabs": false,
+    "arrowParens": "avoid",
+    "endOfLine": "auto"
+}
