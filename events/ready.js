@@ -4,6 +4,6 @@ module.exports = {
   execute(client) {
     client.user.setStatus("idle");
     client.user.setActivity("/setup pour commancer", { type: "WATCHING" });
-    console.log(`connceter sur ${client.user.tag}`);
+    console.log(`connceter sur: ${client.user.tag}`);
   },
 };
