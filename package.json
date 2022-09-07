@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {"deploy": "npm run lint && node deploy-commands.js",
-  "start": "npm run lint && node .",
-  "lint": "eslint *.js **/*.js",
-  "lint:fix": "eslint *.js **/*.js --fix"},
+  "scripts": {
+    "deploy": "npm run lint && node deploy-commands.js",
+    "start": "npm run lint && node .",
+    "lint": "eslint *.js **/*.js",
+    "lint:fix": "eslint *.js **/*.js --fix"
+  },
   "engines": {
     "node": "16.x"
   },
@@ -22,7 +24,7 @@
     "parse-ms": "^2.1.0"
   },
   "devDependencies": {
-    "eslint": "^8.13.0",
+    "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
