@@ -20,9 +20,10 @@
     "@discordjs/rest": "^1.0.1",
     "discord-api-types": "^0.37.2",
     "discord.js": "13.6.0",
+    "dotenv": "^16.0.2",
+    "eslint": "^8.23.0",
     "mongoose": "^6.5.2",
-    "parse-ms": "^2.1.0",
-    "eslint": "^8.23.0"
+    "parse-ms": "^2.1.0"
   },
   "devDependencies": {
     "eslint": "^8.23.0",

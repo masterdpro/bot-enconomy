@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 const { Client, Intents, Collection } = require("discord.js");
-const { token, database_uri } = require("./config.json");
+const dotenv = require('dotenv'); dotenv.config();
 const mongoose = require("mongoose");
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -40,7 +40,7 @@ process.on("unhandledRejection", (reason, promis) => {
 
 process.on("warning", (...args) => console.log(...args));
 
-mongoose.connect(database_uri, {
+mongoose.connect(process.env.DATABASE_URI, {
   autoIndex: false,
   maxPoolSize: 10,
   serverSelectionTimeoutMS: 5000,
@@ -48,4 +48,4 @@ mongoose.connect(database_uri, {
   family: 4,
 }).then(() => console.log("connecter a la DB")).catch(err => console.error(err));
 
-client.login(token);
+client.login(process.env.token);
