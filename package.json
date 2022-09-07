@@ -1,0 +1,30 @@
+{
+  "name": "plu-econo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run lint && node deploy-commands.js",
+    "start": "npm run lint && node .",
+    "lint": "eslint *.js **/*.js",
+    "lint:fix": "eslint *.js **/*.js --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^1.1.0",
+    "@discordjs/rest": "^1.0.1",
+    "discord-api-types": "^0.37.2",
+    "discord.js": "13.6.0",
+    "mongoose": "^6.5.2",
+    "parse-ms": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2"
+  }
+}
