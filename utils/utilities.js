@@ -14,8 +14,8 @@ async function getMember(member) {
 }
 
 async function createMember(member) {
-  gars = await getMember(member);
-  if (gars.coin > 0 ) {return('tu es deja enregistré')
+  const memberData = await Member.findOne({ id: member.id });
+  if (member.id === memberData.id) {return('tu es deja enregistré')
  }else{
   const newMember = new Member({ id: member.id, guildId: member.guild.id });
   newMember.save().then(u => console.log(` nouveau joueur -> ${u.id}`));}
