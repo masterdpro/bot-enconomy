@@ -19,6 +19,16 @@ const shop = {
     description: "une banane étrangement puissante, personne ne sait quelle est son vrais pourvoir...",
     price: 10000,
   },
+  Baguette: {
+    name:"Baguette",
+    description: "SOME OUI OUI BAGUETTE",
+    price: 1000,
+  },
+  Pro_sword: {
+    name:"Pro_sword",
+    description: "Le trophée qui prouve que tu as partie des premiers dans cette avanture folle",
+    price: 100,
+  },
 
 };
 

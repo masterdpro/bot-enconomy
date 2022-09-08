@@ -58,13 +58,12 @@ async function leaderboard(guildId) {
   const guildLeaderboard = await Member.find({ guildId: guildId }).sort({ coins: -1 }).limit(10);
   return guildLeaderboard;
 }
-const random = getRandomInt(100, 1000);
 
 async function daily(member) {
   member = await getMember(member);
   const now = new Date();
   if (member.daily.getDate() != now.getDate()) {
-    member.coins += random;
+    member.coins += 500;
     member.daily = now;
     updateMember(member, { coins: member.coins, daily: member.daily });
     return `vous avez recuper vos ${random} coins journaliere`;
