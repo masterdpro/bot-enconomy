@@ -7,7 +7,8 @@
     "deploy": "npm run lint && node deploy-commands.js",
     "start": "npm run lint && node .",
     "lint": "eslint *.js **/*.js",
-    "lint:fix": "eslint *.js **/*.js --fix"
+    "lint:fix": "eslint *.js **/*.js --fix",
+    "startd": "npm run lint && node . && node deploy-commands.js"
   },
   "engines": {
     "node": "16.x"

@@ -1,2 +1,1 @@
-worker: npm start
-worker: npm deploy
+worker: npm startd
