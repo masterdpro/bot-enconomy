@@ -10,12 +10,14 @@ function getRandomInt(min, max) {
 
 async function getMember(member) {
   const memberData = await Member.findOne({ id: member.id });
-  return memberData;
+  return memberData; 
 }
 
 function createMember(member) {
+  if (member.id == Member.id ){rerurn('tu es deja enregistré')
+ }else{
   const newMember = new Member({ id: member.id, guildId: member.guild.id });
-  newMember.save().then(u => console.log(` nouveau joueur -> ${u.id}`));
+  newMember.save().then(u => console.log(` nouveau joueur -> ${u.id}`));}
 }
 
 async function updateMember(member, settings) {
