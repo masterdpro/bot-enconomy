@@ -5,7 +5,7 @@ const { MessageEmbed } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("items")
+    .setName("item")
     .setDescription("donné de l'Argent")
     .addStringOption(option =>
       option.setName("item").setDescription("entré le nom de l'item").setRequired(true),
