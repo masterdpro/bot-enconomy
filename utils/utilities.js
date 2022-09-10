@@ -63,7 +63,7 @@ async function daily(member) {
     member.coins += 500;
     member.daily = now;
     updateMember(member, { coins: member.coins, daily: member.daily });
-    return `vous avez recuper vos 500 coins journaliere`;
+    return "vous avez recuper vos 500 coins journaliere";
   } else {
     return "vous avez deja recuper votre paye revenez demain";
   }
