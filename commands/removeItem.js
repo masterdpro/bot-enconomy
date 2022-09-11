@@ -4,7 +4,7 @@ const { capitalizeFirstLetter, removeItem, getMemberInventory } = require("../ut
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("removeitem")
-    .setDescription("utilise ton épée en bois")
+    .setDescription("retire litem de quelqu'un")
     .addUserOption(option => option.setName("user")
       .setDescription("utilisateur a qui vous voulez faire subire votre puissant").setRequired(true))
     .addStringOption(option =>

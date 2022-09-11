@@ -4,7 +4,7 @@ const { capitalizeFirstLetter, addItem } = require("../utils/utilities");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("giveitem")
-    .setDescription("utilise ton épée en bois")
+    .setDescription("donne un item a un utilisateur")
     .addUserOption(option => option.setName("user")
       .setDescription("utilisateur a qui vous voulez faire subire votre puissant").setRequired(true))
     .addStringOption(option =>
