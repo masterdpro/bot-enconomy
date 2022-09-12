@@ -4,7 +4,7 @@ const { work } = require("../utils/utilities");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("work")
-    .setDescription("gagne ta vie une fois tout les 24H !"),
+    .setDescription("travaille une fois tout les heur"),
   async execute(interaction) {
     interaction.reply(await work(interaction.member));
   },

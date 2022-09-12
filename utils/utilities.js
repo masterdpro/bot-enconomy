@@ -117,12 +117,12 @@ async function work(member) {
   member = await getMember(member);
   const now = new Date(Date.now() - 82800000);
   if (member.work.getDate() != now.getDate()) {
-    member.coins += 500;
+    member.coins += 100;
     member.work = new Date(Date.now() - 82800000);
     updateMember(member, { coins: member.coins, work: member.work });
-    return "vous avez recuper vos 500 coins journaliere";
+    return "voici ta paye de 100 coins :D";
   } else {
-    return "vous avez deja recuper votre paye revenez demain";
+    return "tu as deja travailler.";
   }
 }
 
