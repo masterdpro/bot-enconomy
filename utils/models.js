@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const yesterday = new Date();
 yesterday.setDate(yesterday.getDate() - 1);
-const hour = Date.now() + (1000 * 60 * 60)
+const hour = Date.now()
 
 // let author = await mongoose.fetch(`work_${message.guild.id}_${user.id}`)
 
