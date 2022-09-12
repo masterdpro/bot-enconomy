@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const yesterday = new Date();
 yesterday.setDate(yesterday.getDate() - 1);
-const hourDelay = new Date( Date.now() + 3600000 );
-hourDelay.setDate(hourDelay.getDate())
+const hourDelay = new Date();
+hourDelay.setHours(hourDelay.getHours());
 // let author = await mongoose.fetch(`work_${message.guild.id}_${user.id}`)
 
 const memberShema = new mongoose.Schema({
