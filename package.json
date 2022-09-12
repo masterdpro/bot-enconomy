@@ -24,7 +24,8 @@
     "dotenv": "^16.0.2",
     "eslint": "^8.23.0",
     "mongoose": "^6.5.2",
-    "parse-ms": "^2.1.0"
+    "parse-ms": "^2.1.0",
+    "pretty-ms": "^7.0.1"
   },
   "devDependencies": {
     "eslint": "^8.23.0",

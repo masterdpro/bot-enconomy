@@ -1,4 +1,5 @@
 const Member = require("./models");
+const pretty = require("pretty-ms");
 
 
 function getRandomInt(min, max) {
@@ -112,5 +113,17 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
+async function work(member) {
+  member = await getMember(member);
+  const now = new Date();
+  if (member.work.getDate() != now.getDate()) {
+    member.coins += 500;
+    member.work = now;
+    updateMember(member, { coins: member.coins, daily: member.work });
+    return "vous avez recuper vos 500 coins journaliere";
+  } else {
+    return "vous avez deja recuper votre paye revenez demain";
+  }
+}
 
-module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem };
+module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work };
