@@ -118,8 +118,8 @@ async function work(member) {
   const now = new Date();
   if (member.work.getDate() != now.getDate()) {
     member.coins += 500;
-    member.work = Date.now() + (1000 * 60 * 60)
-    updateMember(member, { coins: member.coins, daily: member.work });
+    member.work = now;
+    updateMember(member, { coins: member.coins, work: member.work });
     return "vous avez recuper vos 500 coins journaliere";
   } else {
     return "vous avez deja recuper votre paye revenez demain";
