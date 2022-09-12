@@ -115,7 +115,7 @@ function capitalizeFirstLetter(string) {
 
 async function work(member) {
   member = await getMember(member);
-  const now = new Date(Date.now() - 90000000);
+  const now = new Date(Date.now() - 79,200,000);
   if (member.work.getDate() != now.getDate()) {
     member.coins += 500;
     member.work = now;
