@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const yesterday = new Date();
 yesterday.setDate(yesterday.getDate() - 1);
 const hour = new Date( Date.now() - 3600000 );
-const hourDelay = new Date( Date.now() - 3600000);
+const hourDelay = Date( Date.now() - 3600000);
 hourDelay.setDate(hourDelay.getDate() - 1)
 // let author = await mongoose.fetch(`work_${message.guild.id}_${user.id}`)
 
