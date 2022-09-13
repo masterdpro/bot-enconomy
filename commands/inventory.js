@@ -8,7 +8,7 @@ module.exports = {
   async execute(interaction) {
     const memberInventory = await getMemberInventory(interaction.member);
     if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
-    return interaction.reply(`voivi ton inventaire \`${memberInventory.join("\n")}\``);
+    return interaction.reply(`voici ton inventaire \`${memberInventory.join("\n")}\``);
   },
 };
 
