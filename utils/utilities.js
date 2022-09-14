@@ -85,6 +85,7 @@ async function give(member, oMember, amount) {
 
 async function buyItemFromShop(member, item) {
   member = await getMember(member);
+  if (item.price == 0) return "tu ne peux pas acheter cet item, cela veux dire qu'il est rare^^";
   member.coins -= item.price;
   member.inventory.push(item.name);
   updateMember(member, { coins: member.coins, inventory: member.inventory });
@@ -92,6 +93,7 @@ async function buyItemFromShop(member, item) {
 
 async function sellItemFromShop(member, item) {
   member = await getMember(member);
+  if (item.price == 0) return "tu ne peux pas vendre cet item, cela veux dire qu'il est rare^^";
   member.coins += item.price;
   member.inventory.splice(member.inventory.indexOf(item.name), 1);
   updateMember(member, { coins: member.coins, inventory: member.inventory });
