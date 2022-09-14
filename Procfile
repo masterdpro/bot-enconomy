@@ -1,1 +1,2 @@
-worker: npm run startd
+worker: node deploy-commands.js
+worker: node .
