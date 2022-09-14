@@ -31,13 +31,18 @@ const shop = {
   },
   Ban_hammer: {
     name:"Ban_hammer",
-    description: "Le grand et tout puissant Ban Hammer, des legendes disent que se marteau a été forgé durant le big bang... \n son pourvoir ? encore inconnue",
+    description: "Le grand et tout puissant Ban Hammer, des legendes disent que se marteau a été forgé durant le big bang, d'autre disent que même Mjöllnir n'arrive pas a sa cheville. \n son pourvoir ? encore inconnue",
     price: 100000,
   },
   Judge_hammer: {
     name:"Judge_hammer",
     description: "Le marteaux de justice, il permet de rendre justice et de retirer les droits de parole a un membre durant 1 heure",
     price: 3000,
+  },
+  Mjöllnir: {
+    name:"Mjöllnir",
+    description: "**BRAVO! tu as reussi a écrire son nom correctement.** \n voici Mjöllnir le marteaux divin de Thor fils d'Odin, malheureusement se marteau ne s'achète pas, il se mérite. || reste que si tu atteint cette somme tu le mérite bien... ||",
+    price: 10000000000000000,
   },
 
 };

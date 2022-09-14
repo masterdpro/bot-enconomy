@@ -12,11 +12,11 @@ module.exports = {
     const omember = interaction.options.getMember("user");
     if (omember) {
       const memberInventory = await getMemberInventory(omember);
-      interaction.reply(`l'inventaire de ${omember} \`${memberInventory.join("\n")}\``);
+      interaction.reply(`l'inventaire de ${omember} \n \`${memberInventory.join("\n")}\``);
     }
     if (omember == "") return
     else if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
-    return interaction.reply(`voici ton inventaire \`${memberInventory.join("\n")}\``);
+    return interaction.reply(`voici ton inventaire \n \`${memberInventory.join("\n")}\``);
   },
 };
 
