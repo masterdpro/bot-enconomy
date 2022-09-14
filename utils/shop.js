@@ -29,6 +29,16 @@ const shop = {
     description: "Le trophée qui prouve que tu as partie des premiers dans cette avanture folle",
     price: 100,
   },
+  Ban_hammer: {
+    name:"Ban_hammer",
+    description: "Le grand et tout puissant Ban Hammer, des legendes disent que se marteau a été forgé durant le big bang... \n son pourvoir ? encore inconnue",
+    price: 100000,
+  },
+  Judge_hammer: {
+    name:"Judge_hammer",
+    description: "Le marteaux de justice, il permet de rendre justice et de retirer les droits de parole a un membre durant 1 heure",
+    price: 3000,
+  },
 
 };
 
