@@ -4,7 +4,7 @@ const shop = require("../utils/shop");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("baguette")
+    .setName("baguete")
     .setDescription("utilise ta baguette"),
     async execute(interaction) {
     const memberInventory = await getMemberInventory(interaction.member);

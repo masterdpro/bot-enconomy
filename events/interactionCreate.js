@@ -7,11 +7,6 @@ module.exports = {
 
     if (!command) return;
 
-    if (interaction.isButton()){
-      const btn = client.buttons.get(interaction.customId);
-        if (!btn) return interaction.reply('se boutton existe pas');
-        btn.runInteraction(client, interaction);
-    }
 
     try {
       await command.execute(interaction, client);
