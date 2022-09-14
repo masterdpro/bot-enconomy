@@ -36,6 +36,7 @@ module.exports = {
       const item = shop[itemName];
       if (!item) return interaction.reply("assure toi que tu a bien orthographier l'item");
       if (memberMoney < item.price) return interaction.reply("assure toi que tu assez de coins </balance:1009850854213435422>");
+      if (item.price == 0) return "tu ne peux pas acheter cet item, cela veux dire qu'il est rare^^";
       buyItemFromShop(interaction.member, item);
       interaction.reply(`vous avec acheter ${item.name} pour le pris de ${item.price}  (</inventory:1009850854213435423>)`);
       break;
@@ -44,6 +45,7 @@ module.exports = {
       const itemName = capitalizeFirstLetter(interaction.options.getString("item"));
       const item = shop[itemName];
       if (!memberInventory.includes(itemName)) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
+      if (item.price == 0) return "tu ne peux pas vendre cet item, cela veux dire qu'il est rare^^";
       sellItemFromShop(interaction.member, item);
       interaction.reply(`vous avez vendu ${item.name} pour le pris de ${item.price}  (</inventory:1009850854213435423>)`);
       break;
