@@ -1,25 +1,19 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { leaderboard } = require("../utils/utilities");
+
+const butttons = new MessageActionRow()
+    .addComponents(
+        new MessageButton()
+           .setCustomId('primary-button')
+           .setLabel('primary')
+           .setStyle('PRIMARY')
+    )
 
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("test")
     .setDescription("affiche le classement des joeures les plus riche"),
   async execute(interaction) {
-    const guildLeaderboard = await leaderboard(interaction.guild.id);
-
-    if (!guildLeaderboard || guildLeaderboard.length < 1) return interaction.reply(" ce serveur na pas de leaderboard");
-
-    const embed = new MessageEmbed()
-      .setAuthor({ name: `leaderboard de ${interaction.guild.name}`, iconURL: interaction.guild.iconURL() })
-      .setColor("RANDOM");
-
-    for (let i = 0; i < guildLeaderboard.length; i++) {
-      const member = await interaction.guild.members.fetch(guildLeaderboard[i].id);
-      embed.addField(`${i + 1}. ${member.displayName}`, `Coins: ${guildLeaderboard[i].coins}`);
-    }
-
-    return interaction.reply({ embeds: [embed] });
+    await interaction.reply({content: 'bouton', components: [butttons]})
   },
-};
+}
