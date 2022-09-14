@@ -9,7 +9,8 @@ module.exports = {
     
     await command.execute(interaction, client);
 
-    } else if (interaction.isButton())
+    }
+    if (interaction.isButton())
     {
       const btn = client.buttons.get(interaction.customId);
         if (!btn) return interaction.reply('se boutton existe pas');
