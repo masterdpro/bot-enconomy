@@ -12,7 +12,7 @@ module.exports = {
     const omember = interaction.options.getMember("user");
     if (omember) {
       const memberInventory = await getMemberInventory(omember);
-      interaction.reply(`l'inventaire de ${omember} est: ${memberInventory.join(", ")}`);
+      interaction.reply(`l'inventaire de ${omember} \`${memberInventory.join("\n")}\``);
     }
     if (omember == "") return
     else if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
