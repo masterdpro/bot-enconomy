@@ -17,17 +17,17 @@ module.exports = {
       const omemberInventory = await getMemberInventory(omember);
       if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
       const oembed = new MessageEmbed()
-      .setAuthor({ name: `L'inventaire de ${omember}`, iconURL: interaction.guild.iconURL() })
+      .setAuthor({ name: `L'inventaire de ${omember.user}`, iconURL: interaction.guild.iconURL() })
       .setColor("RANDOM")
-      .setDescription(`\n\`${omemberInventory.join("\n")}\``)
+      .setDescription(`\n${omemberInventory.join("\n")}`)
       interaction.reply({ embeds: [oembed] });
     }
     if (omember == "") return
     else if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
     const embed = new MessageEmbed()
-      .setAuthor({ name: `L'inventaire de ${interaction.member}`, iconURL: interaction.guild.iconURL() })
-      .setColor("RANDOM")
-      .setDescription(`\n\`${memberInventory.join("\n")}\``)
+      .setAuthor({ name: `L'inventaire de ${interaction.user}`, iconURL: interaction.guild.iconURL() })
+      .setColor("##c510e6")
+      .setDescription(`\n${memberInventory.join("\n")}`)
     return interaction.reply({ embeds: [embed] });
   },
 };
