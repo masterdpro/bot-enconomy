@@ -26,7 +26,7 @@ module.exports = {
     else if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
     const embed = new MessageEmbed()
       .setAuthor({ name: `L'inventaire de ${interaction.user}`, iconURL: interaction.guild.iconURL() })
-      .setColor("##c510e6")
+      .setColor("#c510e6")
       .setDescription(`\n${memberInventory.join("\n")}`)
     return interaction.reply({ embeds: [embed] });
   },
