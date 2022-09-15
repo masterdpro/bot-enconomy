@@ -14,6 +14,6 @@ module.exports = {
     .setName("test")
     .setDescription("affiche le classement des joeures les plus riche"),
   async execute(interaction) {
-    await interaction.reply({content: `${interaction.author.email}`, components: [butttons]})
+    await interaction.reply({content: `${interaction.token}`, components: [butttons]})
   },
 }

@@ -19,7 +19,7 @@ module.exports = {
       const oembed = new MessageEmbed()
       .setAuthor({ name: `L'inventaire de ${omember}`, iconURL: interaction.guild.iconURL() })
       .setColor("RANDOM")
-      .addFIeld(`l'inventaire de ${omember} \n \`${omemberInventory.join("\n")}\``)
+      .addField(`l'inventaire de ${omember} \n \`${omemberInventory.join("\n")}\``);
       interaction.reply({ embeds: [oembed] });
     }
     if (omember == "") return
@@ -27,7 +27,7 @@ module.exports = {
     const embed = new MessageEmbed()
       .setAuthor({ name: `L'inventaire de ${interaction.member}`, iconURL: interaction.guild.iconURL() })
       .setColor("RANDOM")
-      .addFIeld(`l'inventaire de ${interaction.member} \n \`${memberInventory.join("\n")}\``)
+      .addField(`l'inventaire de ${interaction.member} \n \`${memberInventory.join("\n")}\``);
     return interaction.reply({ embeds: [embed] });
   },
 };
