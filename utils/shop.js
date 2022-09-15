@@ -44,12 +44,6 @@ const shop = {
     description: "**BRAVO! tu as reussi a écrire son nom correctement.** \n voici Mjöllnir le marteaux divin de Thor fils d'Odin, malheureusement se marteau ne s'achète pas, il se mérite. || reste que si tu atteint cette somme tu le mérite bien... ||",
     price: 0,
   },
-  Lucky_sword: {
-    name:"Lucky_sword",
-    description: "Une épée chanceuse ^^",
-    price: 0,
-  },
-
 
 };
 
