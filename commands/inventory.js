@@ -17,7 +17,7 @@ module.exports = {
       const omemberInventory = await getMemberInventory(omember);
       if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
       const oembed = new MessageEmbed()
-      .setAuthor({ name: `L'inventaire de ${omember.user}`, iconURL: interaction.guild.iconURL() })
+      .setAuthor({ name: `L'inventaire de ${omember.user.tag}`, iconURL: interaction.guild.iconURL() })
       .setColor("RANDOM")
       .setDescription(`\n${omemberInventory.join("\n")}`)
       interaction.reply({ embeds: [oembed] });
@@ -25,7 +25,7 @@ module.exports = {
     if (omember == "") return
     else if (memberInventory == "") await interaction.reply("ton invetaire est vide :/");
     const embed = new MessageEmbed()
-      .setAuthor({ name: `L'inventaire de ${interaction.user}`, iconURL: interaction.guild.iconURL() })
+      .setAuthor({ name: `L'inventaire de ${interaction.user.tag}`, iconURL: interaction.guild.iconURL() })
       .setColor("#c510e6")
       .setDescription(`\n${memberInventory.join("\n")}`)
     return interaction.reply({ embeds: [embed] });
