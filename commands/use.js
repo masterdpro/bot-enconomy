@@ -6,11 +6,10 @@ module.exports = {
   data: new SlashCommandBuilder()
     .setName("use")
     .setDescription("utilise tes item")
-    .addUserOption(option => option.setName("user")
-      .setDescription("utilisateur a qui vous voulez faire subire votre puissant").setRequired(false))
       .addStringOption(option =>
-        option.setName("item").setDescription("entré le nom de l'item").setRequired(true),
-      ),
+        option.setName("item").setDescription("entré le nom de l'item").setRequired(true))
+      .addUserOption(option => option.setName("user")
+      .setDescription("utilisateur a qui vous voulez faire subire votre puissant").setRequired(false)),
         async execute(interaction) {
     const member = interaction.options.getMember("user", true);
     const memberInventory = await getMemberInventory(interaction.member);
@@ -21,6 +20,7 @@ module.exports = {
     if (!memberInventory.includes(itemName)) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
     if (itemS == 0) return interaction.reply(` ${itemU}!`)
     if (itemS > 0) {
+      if (member == "") return interaction.reply(` pour utiliser cette item tu dois cibler un membre!`)
       removeItem(interaction.member, itemN);
       return interaction.reply(` ${member} ${itemU}!`),
       await member.timeout(itemS, itemU);
