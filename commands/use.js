@@ -8,10 +8,10 @@ module.exports = {
     .setDescription("utilise tes item")
       .addStringOption(option =>
         option.setName("item").setDescription("entré le nom de l'item").setRequired(true))
-      .addUserOption(option => option.setName("user")
-      .setDescription("utilisateur a qui vous voulez faire subire votre puissant").setRequired(false)),
+      .addUserOption(option => 
+        option.setName("user").setDescription("utilisateur a qui vous voulez faire subire votre puissant").setRequired(false)),
         async execute(interaction) {
-    const member = interaction.options.getMember("user", true);
+    const member = interaction.options.getMember("user");
     const memberInventory = await getMemberInventory(interaction.member);
     const itemName = capitalizeFirstLetter(interaction.options.getString("item"));
     const itemN = shop[itemName];
