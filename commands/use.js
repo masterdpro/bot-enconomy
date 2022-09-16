@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { getMemberInventory, removeItem } = require("../utils/utilities");
+const { getMemberInventory, removeItem, capitalizeFirstLetter } = require("../utils/utilities");
 const shop = require("../utils/shop");
 
 module.exports = {
