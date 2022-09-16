@@ -9,6 +9,11 @@ const exlusive = {
         description: "Badge donnée aux cobaye durant le devlopement du bot",
         price: 0,
       },
+      Quotidian_badge: {
+        name:"Quotidian_badge",
+        description: "Badge ressus par pur chance ^^",
+        price: 0,
+      },
   };
   
   module.exports = exlusive;

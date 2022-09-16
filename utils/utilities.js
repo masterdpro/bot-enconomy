@@ -57,11 +57,11 @@ async function leaderboard(guildId) {
   return guildLeaderboard;
 }
 
-async function daily(member) {
+async function daily(member, amount) {
   member = await getMember(member);
   const now = new Date();
   if (member.daily.getDate() != now.getDate()) {
-    member.coins += 500;
+    member.coins += amount;
     member.daily = now;
     updateMember(member, { coins: member.coins, daily: member.daily });
     return "vous avez recuper vos 500 coins journaliere";
@@ -115,14 +115,14 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
 
-async function work(member) {
-  member = await getMember(member);
+async function work(member, amount) {
+  member = await getMember(member)
   const now = new Date();
   if (member.work.getHours() != now.getHours()) {
-    member.coins += 100;
+    member.coins += amount;
     member.work = now;
     updateMember(member, { coins: member.coins, work: member.work });
-    return "voici ta paye de 100 coins :D";
+    return `voici ta paye de ${amount} coins :D`;
   } else {
     return "tu as deja travailler.";
   }
