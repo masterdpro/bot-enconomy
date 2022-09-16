@@ -14,16 +14,14 @@ module.exports = {
     const member = interaction.options.getMember("user");
     const memberInventory = await getMemberInventory(interaction.member);
     const itemName = capitalizeFirstLetter(interaction.options.getString("item"));
-    const itemN = shop[itemName];
-    const itemS = shop[itemSanction]
-    const itemU = shop[itemUsage]
+    const item = shop[itemName];
     if (!memberInventory.includes(itemName)) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
-    if (itemS == 0) return interaction.reply(` ${itemU}!`)
-    if (itemS > 0) {
+    if (item.sanction == 0) return interaction.reply(` ${item.usage}!`)
+    if (item.sanction > 0) {
       if (member == "") return interaction.reply(` pour utiliser cette item tu dois cibler un membre!`)
-      removeItem(interaction.member, itemN);
-      return interaction.reply(` ${member} ${itemU}!`),
-      await member.timeout(itemS, itemU);
+      removeItem(interaction.member, item);
+      return interaction.reply(` ${member} ${item.usage}!`),
+      await member.timeout(item.sanction, item.usage);
     }
     
     
