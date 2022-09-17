@@ -107,7 +107,7 @@ async function removeItem(member, item) {
 
 async function addItem(member, item) {
   member = await getMember(member);
-  member.inventory.push(item);
+  member.inventory.push(item.name);
   updateMember(member, { inventory: member.inventory });
 }
 
@@ -127,13 +127,13 @@ async function work(member, amount) {
     return "tu as deja travailler.";
   }
 }
-async function mine(member, amount) {
+async function mine(member, item) {
   member = await getMember(member)
   const now = new Date();
   if (member.mine.getHours() != now.getHours()) {
-    member.coins += amount;
+    member.inventory.push(item.name);
     member.mine = now;
-    updateMember(member, { coins: member.coins, mine: member.mine });
+    updateMember(member, { inventory: member.inventory, mine: member.mine });
     return `voici ta paye de ${amount} coins :D`;
   } else {
     return "tu as deja travailler.";

@@ -1,13 +1,13 @@
 const shop = {
-  Broken_to_sword: {
-    name:"Broken_to_sword",
+  Broken_sword: {
+    name:"Broken_sword",
     description: "une épée cassée qui te permet de TimeOut le membre de ton choix 1 minute",
     price: 100,
     sanction: (1 * 60 * 1000),
     usage: "tu a mis K.O un membre durant 1 minute",
   },
-  Wooden_to_sword: {
-    name:"Wooden_to_sword",
+  Wooden_sword: {
+    name:"Wooden_sword",
     description: "une épée en bois qui te permet de TimeOut le membre de ton choix 3 minutes",
     price: 250,
     sanction: (3 * 60 * 1000),
