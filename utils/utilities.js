@@ -134,7 +134,7 @@ async function mine(member, item) {
     member.inventory.push(item.name);
     member.mine = now;
     updateMember(member, { inventory: member.inventory, mine: member.mine });
-    return `voici ta paye de ${amount} coins :D`;
+    return `bravo tu as remporter ${item.name}`;
   } else {
     return "tu as deja travailler.";
   }
