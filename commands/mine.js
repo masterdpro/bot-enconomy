@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { updateMember } = require("../utils/utilities");
+const { mine } = require("../utils/utilities");
 
 function getRandomIntInclusive(min, max) {
   min = Math.ceil(min);
@@ -13,6 +13,6 @@ module.exports = {
     .setName("mine")
     .setDescription("travaille une fois tout les heur"),
   async execute(interaction) {
-    interaction.reply(await updateMember(interaction.member));
+    interaction.reply(await mine(interaction.member, 100));
   },
 };

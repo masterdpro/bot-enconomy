@@ -127,12 +127,12 @@ async function work(member, amount) {
     return "tu as deja travailler.";
   }
 }
-async function work(member, amount) {
+async function mine(member, amount) {
   member = await getMember(member)
   const now = new Date();
-  if (member.work.getHours() != now.getHours()) {
+  if (member.mine.getHours() != now.getHours()) {
     member.coins += amount;
-    member.work = now;
+    member.mine = now;
     updateMember(member, { coins: member.coins, mine: member.mine });
     return `voici ta paye de ${amount} coins :D`;
   } else {
@@ -140,4 +140,4 @@ async function work(member, amount) {
   }
 }
 
-module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work };
+module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work, mine };
