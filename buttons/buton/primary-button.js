@@ -5,4 +5,4 @@ module.exports = {
     async runInteraction( client, interaction)  {
         await interaction.reply({content: 'c moi le plus bô'})
      }
- };
+ }
