@@ -12,7 +12,8 @@ const memberShema = new mongoose.Schema({
   coins: { type: Number, default: 0 },
   inventory: { type: Array, default: [] },
   daily: { type: Date, default: yesterday },
-  work: {type: Date , default: hourDelay }
+  work: {type: Date , default: hourDelay },
+  mine: {type: Date , default: hourDelay }
 });
 
 const Member = mongoose.model("Member", memberShema);
