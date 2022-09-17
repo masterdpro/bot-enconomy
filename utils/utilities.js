@@ -128,13 +128,14 @@ async function work(member, amount) {
   }
 }
 async function mine(member, item) {
+  const itemi = shop[item]
   member = await getMember(member)
   const now = new Date();
   if (member.mine.getHours() != now.getHours()) {
-    member.inventory.push(item);
+    member.inventory.push(itemi.name);
     member.mine = now;
     updateMember(member, { inventory: member.inventory, mine: member.mine });
-    return `bravo tu as remporter ${item}`;
+    return `bravo tu as remporter ${item.name}`;
   } else {
     return "tu as deja travailler.";
   }
