@@ -14,11 +14,14 @@ module.exports = {
     .setDescription("travaille une fois tout les heur"),
   async execute(interaction) {
     const random = Math.floor(Math.random() * 101);
-    if (random < 50 || random == 50) {
+    if (random < 50 && random > 25 || random == 50) {
         interaction.reply(await mine(interaction.member, "Rock"));
     }
+    if (random < 25 && random > 0 || random == 25) {
+      interaction.reply(await mine(interaction.member, "Guitare"));
+    }
     if (random < 75 && random > 50 || random == 75) {
-        interaction.reply(await mine(interaction.member, "Wooden_sword"));
+        interaction.reply(await mine(interaction.member, "Broken_sword"));
     }
     if (random < 90 && random > 75 || random == 90) {
         interaction.reply(await mine(interaction.member, "Judge_hammer"));

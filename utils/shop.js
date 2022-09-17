@@ -62,6 +62,14 @@ const shop = {
     sanction: (0),
     usage: "...",
   },
+  Guitare: {
+    name:"Guitare",
+    description: "*effect musicale* une simple guitare",
+    price: 150,
+    sanction: (0),
+    usage: "musique de Jean-Sébastien Bach, a la guitare claissique \n || https://www.youtube.com/watch?v=JN22ATDxOwQ ||",
+  },
+
 
 };
 

@@ -17,8 +17,8 @@ module.exports = {
     const memberInventory = await getMemberInventory(interaction.member);
     const item = shop[itemName] || exlusive[itemName];
     if (!item) return interaction.reply("assure toi que tu a bien orthographier l'item");
-    if ( itemName == "Lucky_sword" ) {
-       if (!memberInventory.includes("Lucky_sword")) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
+    if ( itemName == exlusive[itemName] ) {
+       if (!memberInventory.includes(exlusive[itemName])) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
     }
    
 
