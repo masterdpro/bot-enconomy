@@ -16,7 +16,7 @@ module.exports = {
     const itemName = capitalizeFirstLetter(interaction.options.getString("item"));
     const item = shop[itemName];
     if (!memberInventory.includes(itemName)) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
-    if (item.sanction == 0) return interaction.reply(` avant de pouvoir utiliser quelque chose il te faut lavoir `)
+    if (item.sanction == 0) return interaction.reply(`${item.usage}`)
     if (item.sanction > 0 && member != "") {
       removeItem(interaction.member, item);
       return interaction.reply(` ${member} ${item.usage}!`),
