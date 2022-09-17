@@ -127,5 +127,17 @@ async function work(member, amount) {
     return "tu as deja travailler.";
   }
 }
+async function work(member, amount) {
+  member = await getMember(member)
+  const now = new Date();
+  if (member.work.getHours() != now.getHours()) {
+    member.coins += amount;
+    member.work = now;
+    updateMember(member, { coins: member.coins, mine: member.mine });
+    return `voici ta paye de ${amount} coins :D`;
+  } else {
+    return "tu as deja travailler.";
+  }
+}
 
 module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work };

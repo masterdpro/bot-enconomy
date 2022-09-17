@@ -10,7 +10,7 @@ function getRandomIntInclusive(min, max) {
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("work")
+    .setName("mine")
     .setDescription("travaille une fois tout les heur"),
   async execute(interaction) {
     interaction.reply(await updateMember(interaction.member));
