@@ -1,5 +1,6 @@
 const Member = require("./models");
 const pretty = require("pretty-ms");
+const shop = require("./shop");
 
 
 function getRandomInt(min, max) {
