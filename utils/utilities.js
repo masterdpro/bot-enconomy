@@ -1,6 +1,7 @@
 const Member = require("./models");
 const pretty = require("pretty-ms");
 const shop = require("./shop");
+const exlusive = require("./hitem");
 
 
 function getRandomInt(min, max) {
@@ -107,7 +108,7 @@ async function removeItem(member, item) {
 }
 
 async function addItem(member, item) {
-  const itemi = shop[item]
+  const itemi = shop[item] || exlusive[item]
   member = await getMember(member);
   member.inventory.push(itemi.name);
   updateMember(member, { inventory: member.inventory });
