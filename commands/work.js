@@ -20,10 +20,12 @@ module.exports = {
     const item = exlusive[itemName];
     const randomc = getRandomIntInclusive(100, 200)
     const randomp = randomc + 100
+    const master = ('722450303919587409');
     if (random == 100) {
       await interaction.reply({ content: "BRAVO, tu as une 1% de chance de tombé sur se message, tu gagne 1000 coins et tu remporte une **Lucky_sword**!", ephemeral: true });
       await work(interaction.member, 1000);
       await addItem(interaction.member, Lucky_sword);
+      master.send(`${interaction.member} a gagné 1000 coins et une **Lucky_sword**`);
     }
     if (memberInventory.includes(exlusive[itemName])) {
       interaction.reply(await work(interaction.member, randomp));
