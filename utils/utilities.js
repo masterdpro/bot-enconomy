@@ -107,8 +107,9 @@ async function removeItem(member, item) {
 }
 
 async function addItem(member, item) {
+  const itemi = shop[item]
   member = await getMember(member);
-  member.inventory.push(item.name);
+  member.inventory.push(itemi.name);
   updateMember(member, { inventory: member.inventory });
 }
 
