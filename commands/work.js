@@ -16,7 +16,7 @@ module.exports = {
   async execute(interaction) {
     const random = Math.floor(Math.random() * 101);
     const memberInventory = await getMemberInventory(interaction.member);
-    const itemName = ("Lucky_sword" || "Tester_badge");
+    const itemName = ("Lucky_sword");
     const item = exlusive[itemName];
     const randomc = getRandomIntInclusive(100, 200)
     const randomp = randomc + 100
@@ -26,7 +26,7 @@ module.exports = {
       await work(interaction.member, 1000);
       await addItem(interaction.member, Lucky_sword);
       master.send(`${interaction.member} a gagné 1000 coins et une **Lucky_sword**`);
-    }
+    } 
     if (memberInventory.includes(item)) {
       interaction.reply(await work(interaction.member, randomp));
       consolo.log(`${interaction.member} a gagné ${randomp} coins`);
