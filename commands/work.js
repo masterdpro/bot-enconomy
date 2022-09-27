@@ -27,8 +27,9 @@ module.exports = {
       await addItem(interaction.member, Lucky_sword);
       master.send(`${interaction.member} a gagné 1000 coins et une **Lucky_sword**`);
     }
-    if (memberInventory.includes(exlusive[itemName])) {
+    if (memberInventory.includes(item)) {
       interaction.reply(await work(interaction.member, randomp));
+      consolo.log(`${interaction.member} a gagné ${randomp} coins`);
     }
     interaction.reply(await work(interaction.member, randomc));
   },
