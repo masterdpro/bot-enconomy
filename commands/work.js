@@ -33,3 +33,5 @@ module.exports = {
     interaction.reply(await work(interaction.member, randomc));
   },
 };
+
+
