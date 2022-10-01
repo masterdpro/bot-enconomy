@@ -33,6 +33,8 @@ process.on("uncaughtException", (err, origin) => {
   console.error(`le bot a fais un arret cardiaque (origin) ${origin}`);
 });
 
+//test
+
 process.on("unhandledRejection", (reason, promis) => {
   console.error(`unhandle ta grand maman la ${reason}`);
   console.error(`promise ta grand maman la ${promis}`);
