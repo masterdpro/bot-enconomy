@@ -51,3 +51,5 @@ mongoose.connect(process.env.DATABASE_URI, {
 }).then(() => console.log("connecter a la DB")).catch(err => console.error(err));
 
 client.login(process.env.token);
+
+//test
