@@ -1,5 +1,7 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
 const { hpup, getMemberInventory, capitalizeFirstLetter, getMember } = require("../utils/utilities");
+const shop = require("../utils/shop");
+
 
 module.exports = {
   data: new SlashCommandBuilder()
