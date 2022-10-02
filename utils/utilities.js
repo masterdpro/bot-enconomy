@@ -150,5 +150,10 @@ async function mine(member, item) {
     updateMember(member, { health: member.health });
   }
 
+  async function getMemberhp(member) {
+    member = await getMember(member);
+    return member.health;
+  }
 
-module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work, mine, hpup };
+
+module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work, mine, hpup, getMemberhp };
