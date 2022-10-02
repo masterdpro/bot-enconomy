@@ -108,7 +108,7 @@ async function removeItem(member, item) {
 }
 
 async function addItem(member, item) {
-  const itemi = shop[item] || exlusive[item]
+  const itemi = shop[item];
   member = await getMember(member);
   member.inventory.push(itemi.name);
   updateMember(member, { inventory: member.inventory });
@@ -146,7 +146,7 @@ async function mine(member, item) {
 
   async function hpup (member, item) {
     member = await getMember(member);
-    member.health -= item.sanction;
+    member.health += item.sanction;
     updateMember(member, { health: member.health });
   }
 

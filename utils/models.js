@@ -14,7 +14,7 @@ const memberShema = new mongoose.Schema({
   daily: { type: Date, default: yesterday },
   work: {type: Date , default: hourDelay },
   mine: {type: Date , default: hourDelay },
-  health: { type: Number, default: 100 }
+  health: { type: Number, default: 0}
 });
 
 const Member = mongoose.model("Member", memberShema);
