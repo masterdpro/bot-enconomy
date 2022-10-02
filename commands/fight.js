@@ -6,8 +6,7 @@ module.exports = {
     .setName("fight")
     .setDescription("Affronté un membre")
     .addStringOption(option =>
-      option.setName("item").setDescription("entré le montant donné").setRequired(true).setMinValue(1),
-    )
+      option.setName("item").setDescription("entré le montant donné").setRequired(true),)
     .addUserOption(option => option.setName("user")
       .setDescription("utilisateur a qui vous voulez donner").setRequired(true)),
   async execute(interaction) {
