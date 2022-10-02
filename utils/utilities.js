@@ -145,8 +145,9 @@ async function mine(member, item) {
 }
 
   async function hpup (member, item) {
+    const itemi = shop[item]
     member = await getMember(member);
-    member.health += item.sanction;
+    member.health += itemi.sanction;
     updateMember(member, { health: member.health });
   }
 
