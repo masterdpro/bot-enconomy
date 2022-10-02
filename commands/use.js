@@ -1,5 +1,5 @@
 const { SlashCommandBuilder } = require("@discordjs/builders");
-const { getMemberInventory, removeItem, capitalizeFirstLetter } = require("../utils/utilities");
+const { getMemberInventory, removeItem, capitalizeFirstLetter, hpup } = require("../utils/utilities");
 const shop = require("../utils/shop");
 
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
     if (item.sanction > 0 && member != " ") {
       removeItem(interaction.member, item);
       return interaction.reply(` ${member} ${item.usage}!`),
-      await member.timeout(item.sanction, item.usage);
+      hpup(member, item.sanction);
     }
     
     

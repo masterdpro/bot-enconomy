@@ -144,4 +144,11 @@ async function mine(member, item) {
   }
 }
 
-module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work, mine };
+  async function hpup (member, item) {
+    member = await getMember(member);
+    member.health -= item.sanction;
+    updateMember(member, { health: member.health });
+  }
+
+
+module.exports = { getMember, createMember, updateMember, getMemberMoney, getMemberInventory, addMoney, removeMoney, buyItemFromShop, sellItemFromShop, capitalizeFirstLetter, leaderboard, daily, getRandomInt, give, removeItem, addItem, work, mine, hpup };
