@@ -33,6 +33,8 @@ process.on("uncaughtException", (err, origin) => {
   console.error(`le bot a fais un arret cardiaque (origin) ${origin}`);
 });
 
+//test
+
 process.on("unhandledRejection", (reason, promis) => {
   console.error(`unhandle ta grand maman la ${reason}`);
   console.error(`promise ta grand maman la ${promis}`);
@@ -49,3 +51,5 @@ mongoose.connect(process.env.DATABASE_URI, {
 }).then(() => console.log("connecter a la DB")).catch(err => console.error(err));
 
 client.login(process.env.token);
+
+

@@ -13,7 +13,8 @@ const memberShema = new mongoose.Schema({
   inventory: { type: Array, default: [] },
   daily: { type: Date, default: yesterday },
   work: {type: Date , default: hourDelay },
-  mine: {type: Date , default: hourDelay }
+  mine: {type: Date , default: hourDelay },
+  healt: { type: Number, default: 100 }
 });
 
 const Member = mongoose.model("Member", memberShema);
