@@ -52,7 +52,7 @@ const shop = {
     name:"Judge_hammer",
     description: "Le marteaux de justice, il permet de rendre justice et de retirer les droits de parole a un membre durant 1 heure",
     price: 3000,
-    sanction: (75),
+    sanction: ('75'),
     usage: "PAF PAF PAF, silence durant 1 heure, fin de la seance.",
   },
   Mjöllnir: {
