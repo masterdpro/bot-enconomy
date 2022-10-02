@@ -22,7 +22,7 @@ module.exports = {
     if (item.sanction > 0 && member != " ") {
       removeItem(interaction.member, item);
       return interaction.reply(` ${member} ${item.usage}!`),
-      hpup(member, itemS);
+      hpup(member, item);
     }
     
     

@@ -18,6 +18,6 @@ module.exports = {
     const item = shop[item]
     const itemS  = item.sanction
     if (!memberInventory.includes(itemName)) return interaction.reply("vous n'avez pas l'item en question dans votre inventaire (</inventory:1009850854213435423>)");
-    return interaction.reply(await hpup(member, itemS));
+    return interaction.reply(await hpup(member, item));
   },
 };
